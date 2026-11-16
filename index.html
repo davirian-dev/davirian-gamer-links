@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi Rian Gamer (@daviriangamer) · Links Oficiais</title>
+    
+    <!-- Meta Tags para Redes Sociais -->
+    <meta name="description" content="Hub oficial de links do canal gamer de Davi Rian. Lives, gameplays, clipes de Fortnite, CS2, LoL, Discord e redes oficiais.">
+    <meta property="og:title" content="Davi Rian Gamer · Hub Oficial de Links">
+    <meta property="og:description" content="Lives diárias, clipes e resenha gamer. Conecte-se com a tropa do Davi!">
+    <meta property="og:image" content="./assets/avatar_gamer.jpg">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0B0914">
+
+    <link rel="icon" type="image/jpeg" href="./assets/avatar_gamer.jpg">
+
+    <!-- Google Fonts: Orbitron & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        gamer: ['"Orbitron"', 'sans-serif']
+                    },
+                    colors: {
+                        cyber: {
+                            purple: '#9333EA',
+                            neon: '#06B6D4',
+                            magenta: '#EC4899',
+                            dark: '#0B0914',
+                            card: '#120F24',
+                            hover: '#1B1636',
+                            border: 'rgba(147, 51, 234, 0.25)'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #0B0914;
+            color: #E2E8F0;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(147, 51, 234, 0.2) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.18) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.12) 0px, transparent 60%);
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .gamer-link {
+            background: rgba(18, 15, 36, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gamer-link:hover {
+            transform: translateY(-2px) scale(1.01);
+            border-color: rgba(6, 182, 212, 0.5);
+            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.25), 0 0 15px rgba(147, 51, 234, 0.2);
+            background: rgba(27, 22, 54, 0.95);
+        }
+
+        .rgb-ring {
+            box-shadow: 0 0 25px rgba(147, 51, 234, 0.6), 0 0 15px rgba(6, 182, 212, 0.4);
+            animation: rgbPulse 3s infinite alternate;
+        }
+
+        @keyframes rgbPulse {
+            0% { box-shadow: 0 0 25px rgba(147, 51, 234, 0.6), 0 0 15px rgba(6, 182, 212, 0.4); }
+            100% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.6), 0 0 15px rgba(236, 72, 153, 0.4); }
+        }
+
+        .live-dot {
+            animation: liveBlink 1.2s infinite;
+        }
+
+        @keyframes liveBlink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.15); }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-between px-4 py-8 sm:py-12">
+
+    <!-- Container Central -->
+    <main class="w-full max-w-md mx-auto flex flex-col items-center">
+
+        <!-- Topo: Status Stream & Botões -->
+        <div class="w-full flex items-center justify-between mb-6">
+            <span class="text-[11px] font-mono font-bold tracking-wider text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 live-dot"></span>
+                <span>STREAMER & CREATOR</span>
+            </span>
+
+            <div class="flex items-center gap-2">
+                <button onclick="openQrModal()" class="w-9 h-9 rounded-full bg-cyber-card border border-cyber-border text-slate-400 hover:text-white flex items-center justify-center transition-all" title="Ver QR Code">
+                    <i data-lucide="qr-code" class="w-4 h-4"></i>
+                </button>
+                <button onclick="shareLink()" class="w-9 h-9 rounded-full bg-cyber-card border border-cyber-border text-slate-400 hover:text-white flex items-center justify-center transition-all" title="Compartilhar">
+                    <i data-lucide="share-2" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Perfil do Davi Rian Gamer -->
+        <div class="flex flex-col items-center text-center mb-6">
+            <div class="relative mb-4">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-cyan-400/80 p-1 rgb-ring bg-cyber-card">
+                    <img src="./assets/avatar_gamer.jpg" alt="Davi Rian Gamer" class="w-full h-full object-cover rounded-full">
+                </div>
+                <div class="absolute -bottom-1 -right-1 bg-purple-600 border-2 border-cyber-dark p-1.5 rounded-full text-white shadow-lg" title="Gamer Verificado">
+                    <i data-lucide="gamepad-2" class="w-4 h-4"></i>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-1.5 mb-1">
+                <h1 class="text-2xl sm:text-3xl font-gamer font-bold text-white tracking-wide">DAVI RIAN</h1>
+                <svg class="w-5 h-5 text-cyan-400 fill-cyan-400" viewBox="0 0 24 24"><path d="m9 16.17 7.88-7.88a1.2 1.2 0 0 0-1.7-1.7L9 12.77 5.82 9.59a1.2 1.2 0 0 0-1.7 1.7l4.88 4.88Z"/></svg>
+            </div>
+
+            <p class="text-xs font-mono text-purple-400 font-semibold mb-3">@daviriangamer · @daviriann</p>
+
+            <div class="px-3 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 text-[11px] font-bold mb-3 flex items-center gap-1.5">
+                <span>🎮</span>
+                <span>Canal de Games, Lives & Clipes</span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-300 max-w-xs leading-relaxed">
+                Fortnite, CS2, League of Legends e gameplays insanas. Cola na tropa e acompanhe todos os canais oficiais!
+            </p>
+        </div>
+
+        <!-- Destaque: Canal do YouTube Gamer (Assista aos Vídeos) -->
+        <a href="https://www.youtube.com/@daviriannn" target="_blank" rel="noopener" class="w-full p-4 mb-3 rounded-2xl bg-gradient-to-r from-red-600 via-rose-500 to-pink-600 text-white font-extrabold text-sm sm:text-base flex items-center justify-between shadow-lg shadow-red-600/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-black/20 flex items-center justify-center">
+                    <i data-lucide="youtube" class="w-6 h-6"></i>
+                </div>
+                <div class="text-left">
+                    <div class="font-extrabold">Canal no YouTube (@daviriannn)</div>
+                    <div class="text-[11px] text-rose-100 font-medium">Inscreva-se e ative o sininho das gameplays</div>
+                </div>
+            </div>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+
+        <!-- Lista de Links Gamer -->
+        <div class="w-full flex flex-col gap-2.5 mb-8">
+
+            <!-- LINK: Lives na Twitch / Kick -->
+            <a href="https://www.twitch.tv" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-purple-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-600/15 border border-purple-600/30 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="tv" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-purple-400 transition-colors">Canal de Lives (Transmissões Ao Vivo)</div>
+                        <div class="text-[11px] text-slate-400">Gameplay ao vivo, resenha com o chat e partidas personalizadas</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: Servidor da Tropa no Discord -->
+            <a href="https://discord.com" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-indigo-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/15 border border-indigo-600/30 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-indigo-400 transition-colors">Servidor do Discord (Comunidade Gamer)</div>
+                        <div class="text-[11px] text-slate-400">Calls para jogar junto, memes, avisos de lives e sorteios</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: TikTok Clipes Gamer -->
+            <a href="https://www.tiktok.com/@daviriann" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-cyan-400">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 fill-cyan-400" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.33-6.32V8.92a8.28 8.28 0 0 0 4.84 1.54V7.02a4.87 4.87 0 0 1-.92-.33Z"/></svg>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">TikTok de Clipes (@daviriann)</div>
+                        <div class="text-[11px] text-slate-400">Os melhores cortes, jogadas mitadas e momentos engraçados</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: Instagram Gamer -->
+            <a href="https://www.instagram.com/daviriann" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-pink-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center text-pink-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-pink-400 transition-colors">Instagram Oficial (@daviriann)</div>
+                        <div class="text-[11px] text-slate-400">Bastidores do setup, stories de quando entra ao vivo e novidades</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: Kwai Gamer -->
+            <a href="https://www.kwai.com/@daviriannnn" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-amber-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="video" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-amber-400 transition-colors">Kwai Gamer (@daviriannnn)</div>
+                        <div class="text-[11px] text-slate-400">Vídeos rápidos diários de jogos e reações</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: Playlists de Games no Spotify -->
+            <a href="https://open.spotify.com/user/31lktxgjusaqtulieglfgxjsajq4" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-emerald-400">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="music" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">Playlist Gamer no Spotify</div>
+                        <div class="text-[11px] text-slate-400">Trilha sonora oficial para foco, tryhard e ranqueadas</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+            <!-- LINK: Grupo VIP / WhatsApp da Tropa -->
+            <a href="https://wa.me/557196815876?text=Fala%20Davi!%20Quero%20entrar%20no%20grupo%20gamer%20ou%20jogar%20com%20voc%C3%AA!" target="_blank" rel="noopener" class="w-full p-3.5 rounded-xl gamer-link flex items-center justify-between group border-l-4 border-l-emerald-500">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">WhatsApp da Tropa / Parcerias</div>
+                        <div class="text-[11px] text-slate-400">Contato direto, parcerias de marcas e convites para eventos</div>
+                    </div>
+                </div>
+                <i data-lucide="external-link" class="w-4 h-4 text-slate-500 group-hover:text-white transition-colors"></i>
+            </a>
+
+        </div>
+
+        <!-- Banner Visual Gamer com Foto Real do Setup -->
+        <div class="w-full rounded-2xl overflow-hidden border border-cyber-border mb-8 relative group">
+            <img src="./assets/banner_gamer.jpg" alt="Setup Gamer Davi Rian" class="w-full h-36 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0B0914] via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-bold text-white">
+                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan-400 live-dot"></span> Setup & Arena Gamer</span>
+                <span class="text-purple-300 font-mono text-[11px]">Davi Rian Oficial</span>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="text-center text-slate-500 text-[11px]">
+            <p>© 2026 <strong>Davi Rian Gamer</strong> · Todos os direitos reservados</p>
+            <p class="mt-1">Lives, Gameplays & Comunidade Gamer Oficial</p>
+        </footer>
+
+    </main>
+
+    <!-- Modal de QR Code -->
+    <div id="qr-modal" style="display: none;" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-cyber-card border border-cyber-border p-6 rounded-3xl max-w-xs w-full text-center relative shadow-2xl">
+            <button onclick="closeQrModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <h3 class="text-base font-gamer font-bold text-white mb-1">ESCANEIE O QR CODE</h3>
+            <p class="text-xs text-slate-400 mb-4">Abra o Link Gamer do Davi no seu celular</p>
+            <div class="p-3 bg-white rounded-2xl mx-auto inline-block mb-4">
+                <img id="qr-image" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fdavi-gamer-links.vercel.app%2F" alt="QR Code Davi Gamer" class="w-44 h-44">
+            </div>
+            <button onclick="closeQrModal()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-bold text-xs">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        function shareLink() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Davi Rian Gamer · Links Oficiais',
+                    text: 'Acompanhe todos os canais de gameplays e lives do Davi Rian:',
+                    url: window.location.href
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('Link gamer copiado com sucesso!');
+            }
+        }
+
+        function openQrModal() {
+            document.getElementById('qr-modal').style.display = 'flex';
+        }
+
+        function closeQrModal() {
+            document.getElementById('qr-modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
