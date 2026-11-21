@@ -165,6 +165,17 @@
           pointer-events: none;
       }
   </style>
+  <link rel="canonical" href="https://davirian-gamer-links.vercel.app/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Davirian Gamer Links",
+    "url": "https://davirian-gamer-links.vercel.app/",
+    "description": "Links oficiais, streams e comunidade gamer de Davi.",
+    "inLanguage": "pt-BR"
+  }
+  </script>
 </head>
 <body class="flex flex-col items-center justify-between px-4 py-8 sm:py-12 min-h-screen">
 
@@ -192,7 +203,7 @@
         <div class="flex flex-col items-center text-center mb-3">
             <div class="relative mb-3">
                 <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-cyan-400/80 p-1 rgb-ring bg-cyber-card">
-                    <img src="./assets/avatar_gamer.jpg" alt="Davi Rian Gamer" class="w-full h-full object-cover rounded-full">
+                    <img src="./assets/avatar_gamer.webp" alt="Davi Rian Gamer" class="w-full h-full object-cover rounded-full">
                 </div>
                 <div class="absolute -bottom-1 -right-1 bg-purple-600 border-2 border-cyber-dark p-1.5 rounded-full text-white shadow-lg" title="Gamer Verificado">
                     <i data-lucide="gamepad-2" class="w-4 h-4"></i>
@@ -390,16 +401,46 @@
 
         </div>
 
-        <!-- Banner Visual Gamer com Vídeo de Live e Vitória -->
-        <div class="w-full rounded-2xl overflow-hidden border border-cyber-border mb-8 relative group aspect-video sm:aspect-[16/10] bg-black">
-            <video autoplay loop muted playsinline preload="metadata" poster="./assets/banner_gamer.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <source src="./assets/videos/davi_gamer_victory.mp4" type="video/mp4">
-                <img src="./assets/banner_gamer.jpg" alt="Setup Gamer Davi Rian" class="w-full h-full object-cover">
-            </video>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0B0914] via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-bold text-white pointer-events-none">
-                <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan-400 live-dot animate-pulse"></span> Lives, Clipes & Vitórias</span>
-                <span class="text-purple-300 font-mono text-[11px]">Davi Rian Oficial</span>
+        <!-- Padrão Profitize: Gamer Holo Card Interativo com Física 3D e Reflexo Prismático -->
+        <div style="perspective: 1000px;" class="w-full mb-8">
+            <div id="gamer-holo-card" class="relative rounded-3xl overflow-hidden border border-cyan-500/30 bg-[#0B0914] p-3 sm:p-4 shadow-[0_0_35px_rgba(6,182,212,0.2)] select-none group transition-transform duration-100 ease-out cursor-pointer">
+                <!-- Camada Holográfica Arco-íris / Reflexo de Luz -->
+                <div id="holo-glare" class="absolute inset-0 pointer-events-none z-30 mix-blend-screen opacity-0 transition-opacity duration-200"></div>
+
+                <!-- Banner / Vídeo de Setup Gamer com Badges -->
+                <div class="relative w-full aspect-video sm:aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-black">
+                    <video autoplay loop muted playsinline preload="metadata" poster="./assets/banner_gamer.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <source src="./assets/videos/davi_gamer_victory.mp4" type="video/mp4">
+                        <img src="./assets/banner_gamer.webp" alt="Setup Gamer Davi Rian" class="w-full h-full object-cover">
+                    </video>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0B0914] via-black/20 to-transparent pointer-events-none"></div>
+
+                    <!-- Badges Flutuantes estilo Carta Colecionável -->
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider bg-cyan-400 text-black shadow-lg flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-black animate-ping"></span>
+                        MESTRE
+                    </span>
+                    <span class="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-black/75 border border-cyan-500/30 text-cyan-300 backdrop-blur-md">
+                        ARENA GAMER
+                    </span>
+
+                    <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-xs font-bold text-white pointer-events-none">
+                        <span class="flex items-center gap-1.5 text-[11px]"><span class="w-2 h-2 rounded-full bg-cyan-400 live-dot animate-pulse"></span> Lives, Clipes & Vitórias</span>
+                        <span class="text-purple-300 font-mono text-[11px]">Davi Rian Oficial</span>
+                    </div>
+                </div>
+
+                <!-- KPIs Estilo Profitize (K/D Ratio & Win Rate) -->
+                <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-purple-500/20">
+                    <div class="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5 text-center">
+                        <span class="block text-[10px] text-zinc-400 uppercase font-semibold">K/D Ratio</span>
+                        <span class="text-sm sm:text-base font-black text-cyan-400 font-gamer">2.84</span>
+                    </div>
+                    <div class="p-2 sm:p-2.5 rounded-xl bg-white/5 border border-white/5 text-center">
+                        <span class="block text-[10px] text-zinc-400 uppercase font-semibold">Taxa de Vitória</span>
+                        <span class="text-sm sm:text-base font-black text-purple-400 font-gamer">68%</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -710,7 +751,69 @@
         function openQrModal() { document.getElementById('qr-modal').style.display = 'flex'; }
         function closeQrModal() { document.getElementById('qr-modal').style.display = 'none'; }
 
+        // Padrão Profitize: Interatividade 3D e Brilho Holográfico no Holo Card Gamer (Ultra Otimizado)
+        (function initGamerHoloCard() {
+            const card = document.getElementById('gamer-holo-card');
+            const glare = document.getElementById('holo-glare');
+            if (!card || !glare) return;
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            let ticking = false;
+            let currentTransform = '';
+            let currentGlare = '';
+
+            const updateCard = () => {
+                card.style.transform = currentTransform;
+                glare.style.background = currentGlare;
+                glare.style.opacity = '0.85';
+                ticking = false;
+            };
+
+            const onMove = (e) => {
+                const rect = card.getBoundingClientRect();
+                const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const rX = Math.max(-12, Math.min(12, ((y - centerY) / centerY) * -12));
+                const rY = Math.max(-12, Math.min(12, ((x - centerX) / centerX) * 12));
+
+                currentTransform = `rotateX(${rX.toFixed(2)}deg) rotateY(${rY.toFixed(2)}deg)`;
+                const glareX = ((x / rect.width) * 100).toFixed(1);
+                const glareY = ((y / rect.height) * 100).toFixed(1);
+                currentGlare = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(6,182,212,0.45) 0%, rgba(168,85,247,0.35) 30%, transparent 70%)`;
+
+                if (!ticking) {
+                    requestAnimationFrame(updateCard);
+                    ticking = true;
+                }
+            };
+
+            const onLeave = () => {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                glare.style.opacity = '0';
+            };
+
+            card.addEventListener('mousemove', onMove);
+            card.addEventListener('mouseleave', onLeave);
+            card.addEventListener('touchmove', onMove, { passive: true });
+            card.addEventListener('touchend', onLeave);
+            card.addEventListener('touchcancel', onLeave);
+        })();
+
         lucide.createIcons();
     </script>
+
+    <footer style="text-align: center; margin-top: 40px; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: #a1a1aa;">
+      <p style="margin-bottom: 6px;">© 2026 Davirian Gamer Links. Todos os direitos reservados.</p>
+      <div style="display: flex; gap: 14px; justify-content: center;">
+        <a href="/privacidade.html" style="color: #60a5fa; text-decoration: none;">Política de Privacidade</a>
+        <a href="/termos.html" style="color: #60a5fa; text-decoration: none;">Termos de Uso</a>
+      </div>
+    </footer>
 </body>
 </html>
